@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/ucrop_black"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <SurfaceView
+            android:id="@+id/cameraPreview"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/ucrop_black"
+        android:layout_height="61.33dp">
+        <ImageView
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/detail_photo_cancel"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:layout_marginLeft="6dp"/>
+
+        <ImageView
+            android:id="@+id/flashMode"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:src="@mipmap/flash_off_select"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+
+
+        <ImageView
+            android:id="@+id/reverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/detail_photo_camera"
+            android:padding="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="6dp"/>
+
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:id="@+id/buttonPanelLl"
+        android:layout_width="match_parent"
+        android:layout_height="143.33dp"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+        <LinearLayout
+            android:id="@+id/isFailLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#14000000"
+            android:visibility="invisible"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/failInfoTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="17.2dp"
+                android:paddingTop="16.5dp"
+                android:paddingBottom="16.5dp"
+                android:text="照片对比失败，请重新拍照"
+                android:textStyle="bold"
+                android:textColor="@color/ucrop_white"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            android:gravity="center"
+            android:background="@color/ucrop_black">
+            <ImageView
+                android:id="@+id/openCamera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:src="@mipmap/detail_photo_button"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

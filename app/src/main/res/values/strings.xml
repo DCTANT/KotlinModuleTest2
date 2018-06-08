@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TestKotlin</string>
+    <string name="fileProvider">com.tstdct.testkotlin.FileProvider</string>
+</resources>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/ucrop_white"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/titlebarLl"
+        android:layout_width="match_parent"
+        android:layout_height="61.33dp"
+        android:background="@color/ucrop_white"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="22dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/backLl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="9.67dp"
+                    android:padding="10dp"
+                    android:text="取消"
+                    android:textColor="@color/ucrop_main_black"
+                    android:textSize="@dimen/font_15"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/chooseFolderBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawablePadding="5dp"
+                android:text="所有照片"
+                android:textColor="@color/ucrop_main_black"
+                android:textSize="@dimen/font_16"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/popLine"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/gallery"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+        </android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/lineGalleyButtom"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/ucrop_white"/>
+
+        <LinearLayout
+            android:id="@+id/buttomLl"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/ucrop_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/burnAfterReadRl"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:padding="10dp"
+                android:visibility="invisible">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/burnAfterReadIv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/selector_register_select"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="阅后即焚"
+                        android:textColor="@color/ucrop_main_black"
+                        android:textSize="@dimen/font_14"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/sendBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="29.67dp"
+                android:layout_marginRight="9dp"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="发送"
+                android:textColor="@color/ucrop_main_blue"/>
+            />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
